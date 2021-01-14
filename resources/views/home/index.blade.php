@@ -1,14 +1,16 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>First Laravel Page</title>
-</head>
-<body>
+@extends('layouts.home')
 
-<h1>Welcome to Laravel</h1>
-<p>This is a paragraph.</p>
-<br>
-<a href="{{route('test', ['id' => 12, 'name' => 'Ahmet'])}}">Test Sayfası</a>
+@section('title', 'Sub Page Title')
 
-</body>
-</html>
+@section('sidebar')
+    @parent
+
+    <p>Sub Page Data</p>
+@endsection
+
+@section('content')
+    <p>This is my body content.</p>
+    aaaaaaaaaaaa <br>
+    bbbbbbbbbbbbbbbbbbbbb <br>
+
+@endsection
