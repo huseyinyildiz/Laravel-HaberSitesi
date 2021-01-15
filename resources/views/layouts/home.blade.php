@@ -1,36 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>@yield('title')</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    @yield('css')
-    @yield('js')
-</head>
+    <meta name="description" content="@yield('description')">
+    <meta name="author" content="Hüseyin Yıldız">
+    <meta name="keywords" content="@yield('keywords')">
+    <title>@yield('title')</title>
+
+    <link href="{{asset('assets')}}/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{asset('assets')}}/css/font-awesome.min.css" rel="stylesheet">
+    <link href="{{asset('assets')}}/css/prettyPhoto.css" rel="stylesheet">
+    <link href="{{asset('assets')}}/css/price-range.css" rel="stylesheet">
+    <link href="{{asset('assets')}}/css/animate.css" rel="stylesheet">
+    <link href="{{asset('assets')}}/css/main.css" rel="stylesheet">
+    <link href="{{asset('assets')}}/css/responsive.css" rel="stylesheet">
+<!--[if lt IE 9]>
+    <script src="{{asset('assets')}}/js/html5shiv.js"></script>
+    <script src="{{asset('assets')}}/js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="{{asset('asset')}}/images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{asset('assets')}}/images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{asset('assets')}}/images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{asset('assets')}}/images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="{{asset('assets')}}/images/ico/apple-touch-icon-57-precomposed.png">
+@yield('css')
+@yield('headerjs')
+
+</head><!--/head-->
+
 <body>
 
-<div class="jumbotron text-center">
-    <h1>Header</h1>
-    <p>Resize this responsive page to see the effect!</p>
-    <a href="/">Home</a>
-    <a href="/about">About Us</a>
-    @yield('header')
-</div>
+@include('home._header')
 
-<div class="container">
-    <div class="row">
-         @yield('sidebar')
-            @yield('content')
+@section('content')
 
-    </div>
-</div>
-<div class="jumbotron text-center">
-    <h1>Footer</h1>
-    <p>Resize this responsive page to see the effect!</p>
-    @yield('footer')
-</div>
+@show
+
+
+@include('home._footer')
+@yield('footerjs')
+
 
 </body>
 </html>
