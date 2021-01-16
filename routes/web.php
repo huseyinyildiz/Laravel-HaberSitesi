@@ -27,8 +27,10 @@ Route::get('/', function () {
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/about', [HomeController::class, 'aboutus'])->name('About');
 //Admin
-Route::get('/admin' , [\App\Http\Controllers\Admin\HomeController::class, 'index'])->name('adminhome');
-
+Route::get('/admin' , [\App\Http\Controllers\Admin\HomeController::class, 'index'])->name('adminhome')->middleware('auth');;
+Route::get('/admin/login', [HomeController::class, 'login'])->name('admin_login');
+Route::post('/admin/logincheck', [HomeController::class, 'logincheck'])->name('admin_logincheck');
+Route::get('/admin/logout', [HomeController::class, 'logout'])->name('admin_logout');
 
 
 //Route::get('/test/{id}', [HomeController::class, 'test'])->where('id', '[0-9]+');

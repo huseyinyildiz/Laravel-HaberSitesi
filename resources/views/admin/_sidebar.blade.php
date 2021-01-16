@@ -6,9 +6,12 @@
                     <img src="{{asset('assets')}}/admin/img/user.png" class="img-thumbnail" />
 
                     <div class="inner-text">
-                        Jhon Deo Alex
-                        <br />
-                        <small>Last Login : 2 Weeks Ago </small>
+                        @auth
+                            <a href="#" class="btn btn-success">{{Auth::user()->name}}</a>
+                            <a href="{{route('admin_logout')}}" class="btn btn-danger">Logout</a>
+                    @endauth
+                            <br/>
+
                     </div>
                 </div>
 
