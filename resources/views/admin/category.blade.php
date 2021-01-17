@@ -16,7 +16,7 @@
         <div class="row">
             <div class="col-md-12">
                 <h1 class="page-head-line">Categories</h1>
-                <h1 class="page-subhead-line">This is dummy text , you can replace it with your original text. </h1>
+                <h1 class="page-subhead-line"><a href="{{route('admin_category_add')}}" class="btn btn-success">Kategori Ekle</a> </h1>
 
             </div>
         </div>
@@ -51,7 +51,7 @@
                                             <td>{{ $rs->title }}</td>
                                             <td>{{ $rs->status }}</td>
                                             <td>Edit</td>
-                                            <td>Delete</td>
+                                            <td><a href="{{route('admin_category_delete', ['id'=>$rs->id])}}" onclick="return confirm('Delete ! Are you sure?')">Delete</a></td>
                                         </tr>
                                         @endforeach
                                         </tbody>

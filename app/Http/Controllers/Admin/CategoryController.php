@@ -24,15 +24,40 @@ class CategoryController extends Controller
 
 
     }
-
     /**
-     * Show the form for creating a new resource.
+     * Show the form for adding a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function add()
     {
-        //
+        $datalist = DB::table('categories')->get()->where('parent_id',0);
+        return view('admin.category_add',['datalist' => $datalist]);
+    }
+
+
+
+
+
+    /**
+     * İnsert data
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function create(Request $request)
+    {
+
+        echo
+
+        DB::table('categories')->insert([
+            'parent_id' => $name = $request->input('parent_id'),
+            'title' => $name = $request->input('title'),
+            'keywords' => $name = $request->input('keywords'),
+            'description' => $name = $request->input('description'),
+            'slug' => $name = $request->input('slug'),
+            'status' => $name = $request->input('status')
+        ]);
+        return redirect()->route('admin_category');
     }
 
     /**
@@ -86,8 +111,9 @@ class CategoryController extends Controller
      * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Category $category)
+    public function destroy(Category $category, $id)
     {
-        //
+        DB::table('categories')->where('id', '=', $id)->delete();
+        return redirect()->route('admin_category');
     }
 }
