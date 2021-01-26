@@ -1,6 +1,9 @@
 @extends('layouts.admin')
 
 @section('title', 'News Edit')
+@section('javascript')
+    <script src="//cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
+@endsection
 
 
 
@@ -61,8 +64,10 @@
 
                             <div class="form-group">
                                 <label>Detail</label>
-                                <input class="form-control" type="text-area" name="detail" value="{{$data->detail}}">
-
+                                <textarea name="detail">{{$data->detail}}</textarea>
+                                <script>
+                                    CKEDITOR.replace( 'detail' );
+                                </script>
                             </div>
                             <div class="form-group">
                                 <label>Slug</label>
