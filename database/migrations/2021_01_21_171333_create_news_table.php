@@ -27,7 +27,7 @@ class CreateNewsTable extends Migration
             $table->string('status',5)->nullable()->default('false');
             $table->timestamps();
         });
-    }
+    }S
 
     /**
      * Reverse the migrations.

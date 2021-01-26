@@ -32,7 +32,7 @@
                         Edit News Form
                     </div>
                     <div class="panel-body">
-                        <form role="form" action="{{route('admin_news_update', ['id'=>$data->id])}})}}" method="post">
+                        <form role="form" action="{{route('admin_news_update', ['id'=>$data->id])}})}}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
                                 <label>Parent</label>
@@ -72,6 +72,16 @@
                             <div class="form-group">
                                 <label>Slug</label>
                                 <input class="form-control" type="text" name="slug" value="{{$data->slug}}">
+
+                            </div>
+
+                            <div class="form-group">
+                                <label>Image</label>
+                                <input class="form-control" type="file" name="image" value="{{$data->image}}">
+
+                                @if($data->image)
+                                    <img src="{{Storage::url($data->image)}}" height="60" alt="">
+                                    @endif
 
                             </div>
                             <div class="form-group">

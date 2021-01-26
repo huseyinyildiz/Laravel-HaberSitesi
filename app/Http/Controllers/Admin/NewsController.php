@@ -8,6 +8,7 @@ use App\Models\News;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class NewsController extends Controller
 {
@@ -50,6 +51,7 @@ class NewsController extends Controller
         $data->category_id  = $request->input('category_id');
         $data->detail = $request->input('detail');
         $data->user_id  = Auth::id();
+        $data->image = Storage::putFile('images', $request->file('image'));
         $data->save();
 
         return redirect()->route('admin_news');
@@ -98,6 +100,7 @@ class NewsController extends Controller
         $data->category_id  = $request->input('category_id');
         $data->detail = $request->input('detail');
         $data->user_id  = Auth::id();
+        $data->image = Storage::putFile('images', $request->file('image'));
         $data->save();
 
         return redirect()->route('admin_news');

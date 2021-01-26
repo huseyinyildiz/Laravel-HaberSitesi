@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="32e0fc98-1bb6-4bbe-b06e-45c75bb9352f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/NewsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_21_171333_create_news_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_21_171333_create_news_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/news.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/news.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/news_add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/news_add.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/news_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/news_edit.blade.php" afterDir="false" />
     </list>
@@ -195,7 +199,7 @@
       <workItem from="1610976761037" duration="4508000" />
       <workItem from="1611248474323" duration="7770000" />
       <workItem from="1611524512416" duration="1157000" />
-      <workItem from="1611648764063" duration="13238000" />
+      <workItem from="1611648764063" duration="15008000" />
     </task>
     <servers />
   </component>

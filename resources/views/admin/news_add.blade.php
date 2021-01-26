@@ -32,7 +32,7 @@
                             Add News Form
                         </div>
                         <div class="panel-body">
-                            <form role="form" action="{{route('admin_news_store')}}" method="post">
+                            <form role="form" action="{{route('admin_news_store')}}" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group">
                                     <label>Parent</label>
@@ -72,6 +72,11 @@
                                 <div class="form-group">
                                     <label>Slug</label>
                                     <input class="form-control" type="text" name="slug">
+
+                                </div>
+                                <div class="form-group">
+                                    <label>Image</label>
+                                    <input class="form-control" type="file" name="image">
 
                                 </div>
                                 <div class="form-group">
