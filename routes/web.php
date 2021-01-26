@@ -56,6 +56,19 @@ Route::middleware('auth')->prefix('admin')->group(function (){
     });
 
 
+#News İmage Gallery
+
+    Route::prefix('image')->group(function (){
+
+
+        Route::get('/create/{news_id}', [\App\Http\Controllers\Admin\ImageController::class, 'create'])->name('admin_image_add');
+        Route::post('/store/{news_id}', [\App\Http\Controllers\Admin\ImageController::class, 'store'])->name('admin_image_store');
+        Route::get('/delete/{id}/{news_id}', [\App\Http\Controllers\Admin\ImageController::class, 'destroy'])->name('admin_image_delete');
+        Route::get('/show', [\App\Http\Controllers\Admin\ImageController::class, 'show'])->name('admin_image_show');
+
+    });
+
+
 
 });
 

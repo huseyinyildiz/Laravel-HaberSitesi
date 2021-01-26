@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32e0fc98-1bb6-4bbe-b06e-45c75bb9352f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/bb188660-b850-45d7-8571-8191b45336de.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/bb188660-b850-45d7-8571-8191b45336de.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/public/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/cache/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/cache/data/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/testing/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/logs/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_21_171333_create_news_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_21_171333_create_news_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/news.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/news.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,7 +197,7 @@
       <workItem from="1610976761037" duration="4508000" />
       <workItem from="1611248474323" duration="7770000" />
       <workItem from="1611524512416" duration="1157000" />
-      <workItem from="1611648764063" duration="16765000" />
+      <workItem from="1611648764063" duration="25851000" />
     </task>
     <servers />
   </component>
