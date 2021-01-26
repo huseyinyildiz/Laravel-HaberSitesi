@@ -23,7 +23,7 @@
                 <a href="{{route('admin_category')}}"><i class="fa fa-bicycle "></i>Category</a>
             </li>
             <li>
-                <a href="gallery.html"><i class="fa fa-anchor "></i>News</a>
+                <a href="{{route('admin_news')}}"><i class="fa fa-anchor "></i>News</a>
             </li>
 
 

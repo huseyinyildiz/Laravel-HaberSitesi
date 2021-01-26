@@ -105,12 +105,12 @@ class CategoryController extends Controller
     public function update(Request $request, Category $category,$id)
     {
         $data=Category::find($id);
-           $data->parent_id=$name = $request->input('parent_id');
-           $data->title=$name = $request->input('title');
-           $data->keywords=$name = $request->input('keywords');
-           $data->description =$name = $request->input('description');
-           $data->slug =$name = $request->input('slug');
-           $data->status =$name = $request->input('status');
+           $data->parent_id= $request->input('parent_id');
+           $data->title=$request->input('title');
+           $data->keywords=$request->input('keywords');
+           $data->description = $request->input('description');
+           $data->slug  = $request->input('slug');
+           $data->status  = $request->input('status');
 
         $data->save();
         return redirect()->route('admin_category');
