@@ -25,6 +25,9 @@
             <li>
                 <a href="{{route('admin_news')}}"><i class="fa fa-anchor "></i>News</a>
             </li>
+            <li>
+                <a href="{{route('admin_setting')}}"><i class="fa fa-anchor "></i>Settings</a>
+            </li>
 
 
 
