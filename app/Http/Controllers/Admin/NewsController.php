@@ -100,7 +100,10 @@ class NewsController extends Controller
         $data->category_id  = $request->input('category_id');
         $data->detail = $request->input('detail');
         $data->user_id  = Auth::id();
-        $data->image = Storage::putFile('images', $request->file('image'));
+        if ($request->file('image')!=null)
+        {
+            $data->image=Storage::putFile('images',$request->file('image'));
+        }
         $data->save();
 
         return redirect()->route('admin_news');
