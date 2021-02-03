@@ -1,10 +1,13 @@
 @extends('layouts.home')
+@php
+    $setting = \App\Models\Setting::first();
+@endphp
 
-@section('title', 'Laravel Haber Sitesi')
+@section('title', $setting->title)
 @section('description')
-   Türkiye'nin en güncel ve güvenilir haberlerinin tek adresi.
+    {{$setting->description}}
 @endsection
-@section('keywords','Haber,Ekonomi,Siyaset,Spor,Gazete,Gündem,Son Dakika')
+@section('keywords',$setting->keywords)
 
 
 @section('content')

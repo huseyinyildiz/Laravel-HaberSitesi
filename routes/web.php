@@ -18,14 +18,15 @@ Route::get('/home2', function () {
     return view('welcome');
 });
 
-Route::redirect('/anasayfa', '/home');
 
-Route::get('/', function () {
-    return view('home.index');
-});
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::get('/about', [HomeController::class, 'aboutus'])->name('About');
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('homepage');
+Route::get('/aboutus', [HomeController::class, 'aboutus'])->name('about');
+Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
+Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
+Route::get('/references', [HomeController::class, 'references'])->name('references');
+
 
 
 
