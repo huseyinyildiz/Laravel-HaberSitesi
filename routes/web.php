@@ -87,6 +87,8 @@ Route::middleware('auth')->prefix('myaccount')->namespace('myaccount')->group(fu
 
 
 
+
+
 Route::get('/admin/login', [HomeController::class, 'login'])->name('admin_login');
 Route::post('/admin/logincheck', [HomeController::class, 'logincheck'])->name('admin_logincheck');
 Route::get('/admin/logout', [HomeController::class, 'logout'])->name('admin_logout');
