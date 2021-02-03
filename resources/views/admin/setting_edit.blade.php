@@ -23,18 +23,14 @@
         <!-- /. ROW  -->
         <div class="row">
             <div class="col-md-12">
-                <div class="alert alert-info">
 
-                    <div class="panel-heading">
-                        Edit Setting Form
-                    </div>
                     <div class="panel-body">
                         <form role="form" action="{{route('admin_setting_update')}}" method="post" enctype="multipart/form-data">
                             @csrf
                 <div class="col-md-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Pill Tabs
+                           Settings
                         </div>
                         <div class="panel-body">
                             <ul class="nav nav-pills">
@@ -95,6 +91,14 @@
                                         <label>Email</label>
                                         <input class="form-control" type="text" name="email" value="{{$data->email}}">
 
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Status</label>
+                                        <select class="form-control" name="status" >
+                                            <option selected="selected">{{$data->status}}</option>
+                                            <option>False</option>
+                                            <option>True</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="smtp-pills">
@@ -162,6 +166,7 @@
                                         <textarea name="references">{{$data->references}}</textarea>
                                     </div>
                                 </div>
+                                <button type="submit" class="btn btn-info">Update Setting </button>
                             </div>
                         </div>
                     </div>
@@ -177,16 +182,9 @@
                                 CKEDITOR.replace( 'contact' );
                             </script>
 
-                            <div class="form-group">
-                                <label>Status</label>
-                                <select class="form-control" name="status" >
-                                    <option selected="selected">{{$data->status}}</option>
-                                    <option>False</option>
-                                    <option>True</option>
-                                </select>
-                            </div>
 
-                            <button type="submit" class="btn btn-info">Update Setting </button>
+
+
 
                         </form>
                     </div>

@@ -36,7 +36,7 @@
                                 <select class="form-control" name="parent_id">
                                     <option value="0" selected>Main Category</option>
                                     @foreach ( $datalist as  $rs )
-                                    <option value="{{ $rs->id }}">{{ $rs->title }}</option>
+                                    <option value="{{ $rs->id }}">{{\App\Http\Controllers\Admin\CategoryController::getParentsTree($rs,$rs->title)}}</option>
                                     @endforeach
                                 </select>
 

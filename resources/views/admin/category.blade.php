@@ -22,9 +22,8 @@
         </div>
         <!-- /. ROW  -->
         <div class="row">
-            <div class="col-md-12">
-                <div class="alert alert-info">
-                    <div class="col-md-6">
+
+                    <div class="col-md-12">
                         <!--   Kitchen Sink -->
                         <div class="panel panel-default">
                             <div class="panel-heading">
@@ -47,7 +46,7 @@
                                         @foreach ( $datalist as  $rs )
                                         <tr>
                                             <td>{{ $rs->id }}</td>
-                                            <td>{{ $rs->parent_id }}</td>
+                                            <td>{{\App\Http\Controllers\Admin\CategoryController::getParentsTree($rs,$rs->title)}}</td>
                                             <td>{{ $rs->title }}</td>
                                             <td>{{ $rs->status }}</td>
                                             <td><a href="{{route('admin_category_edit', ['id'=>$rs->id])}}" >Edit</a></td>
