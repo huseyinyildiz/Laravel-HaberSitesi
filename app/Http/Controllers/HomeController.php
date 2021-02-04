@@ -23,17 +23,29 @@ class HomeController extends Controller
     }
     public function categorynews($id,$slug)
     {
-        $datalist=News::where('category_id',$id)->get();
-        $data=Category::find($id);
-        return view('home.category_news',['data'=>$data,'datalist'=>$datalist]);
+
+        $data=News::find($id);
+        print_r($data);
+        exit();
+
+        //$datalist=News::where('category_id',$id)->get();
+        //$data=Category::find($id);
+        //return view('home.category_news',['data'=>$data,'datalist'=>$datalist]);
     }
 
 
     public function index()
     {
         $setting = Setting::first();
+        $slider = News::select('id','title','image','description','slug')->limit(4)->get();
 
-        return view('home.index');
+        $data = [
+            'setting'=>$setting,
+            'slider'=>$slider,
+            'page'=>'home'
+        ];
+
+        return view('home.index',$data);
     }
 
     public function aboutus()

@@ -116,7 +116,7 @@
                             <li class="dropdown"><a href="#">Category<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
                                     @foreach($parentCategories as $rs)
-                                        <li><a href="{{$rs->id}}">{{$rs->title}}</a></li>
+                                        <li><a href="{{route('categorynews',['id'=>$rs->id,'slug'=>$rs->title])}}">{{$rs->title}}</a></li>
                                     @endforeach
                                 </ul>
                             </li>
