@@ -24,13 +24,13 @@ class HomeController extends Controller
     public function categorynews($id,$slug)
     {
 
-        $data=News::find($id);
-        print_r($data);
-        exit();
+       // $data=News::find($id);
+        //print_r($data);
+        //exit();
 
-        //$datalist=News::where('category_id',$id)->get();
-        //$data=Category::find($id);
-        //return view('home.category_news',['data'=>$data,'datalist'=>$datalist]);
+        $datalist=News::where('category_id',$id)->get();
+        $data=Category::find($id);
+        return view('home.category_news',['data'=>$data,'datalist'=>$datalist]);
     }
 
 
