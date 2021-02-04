@@ -38,10 +38,14 @@ class HomeController extends Controller
     {
         $setting = Setting::first();
         $slider = News::select('id','title','image','description','slug')->limit(4)->get();
+        $daily = News::select('id','title','image','description','slug')->limit(6)->inRandomOrder()->get();
+      //  $old = News::select('id','title','image','description','slug')->limit(4)->orderByDesc()->get();
 
         $data = [
             'setting'=>$setting,
             'slider'=>$slider,
+            'daily' =>$daily,
+
             'page'=>'home'
         ];
 
