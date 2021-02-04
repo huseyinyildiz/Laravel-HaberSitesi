@@ -28,6 +28,9 @@
             <li>
                 <a href="{{route('admin_setting')}}"><i class="fa fa-anchor "></i>Settings</a>
             </li>
+            <li>
+                <a href="{{route('admin_message')}}"><i class="fa fa-anchor "></i>Contact Messages</a>
+            </li>
 
 
 

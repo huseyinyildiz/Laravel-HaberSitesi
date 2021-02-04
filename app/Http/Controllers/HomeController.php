@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Message;
 use App\Models\News;
 use App\Models\Setting;
 use Illuminate\Http\Request;
@@ -49,6 +50,17 @@ class HomeController extends Controller
     {
         $setting = Setting::first();
         return view('home.contact');
+    }
+    public function sendmessage(Request $request)
+    {
+        $data = new Message;
+        $data->name=$request->input('name');
+        $data->email=$request->input('email');
+        $data->phone=$request->input('phone');
+        $data->subject=$request->input('subject');
+        $data->message=$request->input('message');
+        $data->save();
+        return redirect()->route('contact')->with('success','Your message saved,Thanks your feedback');
     }
     public function references()
     {
