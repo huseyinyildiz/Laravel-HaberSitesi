@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\News;
 use App\Models\Setting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -19,7 +20,12 @@ class HomeController extends Controller
     {
         return Setting::first();
     }
-
+    public function categorynews($id,$slug)
+    {
+        $datalist=News::where('category_id',$id)->get();
+        $data=Category::find($id);
+        return view('home.category_news',['data'=>$data,'datalist'=>$datalist]);
+    }
 
 
     public function index()
