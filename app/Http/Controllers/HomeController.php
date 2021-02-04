@@ -37,19 +37,23 @@ class HomeController extends Controller
 
     public function aboutus()
     {
+        $setting = Setting::first();
         return view('home.about');
     }
     public function faq()
     {
+        $setting = Setting::first();
         return view('home.about');
     }
     public function contact()
     {
-        return view('home.about');
+        $setting = Setting::first();
+        return view('home.contact');
     }
     public function references()
     {
-        return view('home.about');
+        $setting = Setting::first();
+        return view('home.references');
     }
 
 

@@ -13,7 +13,7 @@
 
 @section('content')
 
-    @include('home._slider')
+@include('home._slider')
     <section>
         <div class="container">
             <div class="row">
@@ -27,10 +27,12 @@
                                             @include('home._category')
                                     </h4>
                                 </div>
-
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="col-sm-9 padding-right">
+                    içerik
                 </div>
             </div>
         </div>
@@ -38,5 +40,6 @@
 
 
 @endsection
+
 
 
