@@ -9,6 +9,8 @@
                         <li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
                         <li data-target="#slider-carousel" data-slide-to="1"></li>
                         <li data-target="#slider-carousel" data-slide-to="2"></li>
+                        <li data-target="#slider-carousel" data-slide-to="3"></li>
+
                     </ol>
 
 
@@ -33,7 +35,7 @@
                                 <h1>{{$rs->title}}</h1>
                                 <p>{{$rs->description}}</p>
 
-                                <a href="{{route('categorynews',['id'=>$rs->id, 'slug'=>$rs->slug])}}" type="button" class="btn btn-default get">Habere Git</a>
+                                <a href="{{route('new',['id'=>$rs->id, 'slug'=>$rs->slug])}}" type="button" class="btn btn-default get">Habere Git</a>
                             </div>
 
                             <div class="col-sm-6">

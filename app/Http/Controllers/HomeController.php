@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Image;
 use App\Models\Message;
 use App\Models\News;
 use App\Models\Setting;
@@ -50,6 +51,13 @@ class HomeController extends Controller
         ];
 
         return view('home.index',$data);
+    }
+    public function new($id,$slug)
+    {
+        $data=News::find($id);
+        $datalist = Image::where('news_id',$id)->get();
+        return view('home.news_detail',['data'=>$data, 'datalist'=>$datalist]);
+
     }
 
     public function aboutus()
