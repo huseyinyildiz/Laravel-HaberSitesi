@@ -33,6 +33,26 @@ class HomeController extends Controller
         $data=Category::find($id);
         return view('home.category_news',['data'=>$data,'datalist'=>$datalist]);
     }
+    public function getnew(Request $request)
+    {
+        $search=$request->input('search');
+        $count = News::where('title','like','%'.$search.'%')->get()->count();
+        if($count==1)
+        {
+            $data = News::where('title','like','%'.$search.'%')->first();
+            return redirect()->route('new',['id'=>$data->id,'slug'=>$data->slug]);
+        }
+        else
+        {
+            return redirect()->route('newlist',['search'=>$search]);
+        }
+
+    }
+    public function newlist($search)
+    {
+        $datalist = News::where('title','like','%'.$search.'%')->get();
+        return view('home.search_news',['search'=>$search, 'datalist'=>$datalist]);
+    }
 
 
     public function index()

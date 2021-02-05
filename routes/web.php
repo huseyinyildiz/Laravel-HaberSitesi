@@ -31,6 +31,10 @@ Route::get('/references', [HomeController::class, 'references'])->name('referenc
 Route::get('/categorynews/{id}/{slug}', [HomeController::class, 'categorynews'])->name('categorynews');
 Route::post('/sendmessage', [HomeController::class, 'sendmessage'])->name('sendmessage');
 Route::get('/new/[{id}/{slug}', [HomeController::class, 'new'])->name('new');
+Route::post('/getnew', [HomeController::class, 'getnew'])->name('getnew');
+Route::get('/newlist/{search}', [HomeController::class, 'newlist'])->name('newlist');
+
+
 
 
 
