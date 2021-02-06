@@ -48,6 +48,7 @@ class NewsController extends Controller
         $data->keywords = $request->input('keywords');
         $data->description  = $request->input('description');
         $data->slug  = $request->input('slug');
+        $data->status  = $request->input('status');
         $data->category_id  = $request->input('category_id');
         $data->detail = $request->input('detail');
         $data->user_id  = Auth::id();
@@ -96,6 +97,7 @@ class NewsController extends Controller
         $data->title=$request->input('title');
         $data->keywords = $request->input('keywords');
         $data->description  = $request->input('description');
+        $data->status=$request->input('status');
         $data->slug  = $request->input('slug');
         $data->category_id  = $request->input('category_id');
         $data->detail = $request->input('detail');

@@ -26,13 +26,16 @@
                 <a href="{{route('admin_news')}}"><i class="fa fa-anchor "></i>News</a>
             </li>
             <li>
-                <a href="{{route('admin_setting')}}"><i class="fa fa-anchor "></i>Settings</a>
+                <a href="{{route('admin_setting')}}"><i class="fa fa-building "></i>Settings</a>
             </li>
             <li>
-                <a href="{{route('admin_message')}}"><i class="fa fa-anchor "></i>Contact Messages</a>
+                <a href="{{route('admin_message')}}"><i class="fa fa-circle-o-notch "></i>Contact Messages</a>
             </li>
             <li>
-                <a href="{{route('admin_review')}}"><i class="fa fa-anchor "></i>Reviews</a>
+                <a href="{{route('admin_review')}}"><i class="fa fa-comment "></i>Reviews</a>
+            </li>
+            <li>
+                <a href="{{route('admin_faq')}}"><i class="fa fa-question "></i>FAQS</a>
             </li>
 
 
