@@ -48,6 +48,11 @@
                                 <h2>{{$data->title}}</h2>
                                 <h5>{{$data->description}}</h5>
                             </div><!--/product-information-->
+                            @php
+                            $avgrev =\App\Http\Controllers\HomeController::avrgreview($data->id);
+                            $countreview = \App\Http\Controllers\HomeController::countreview($data->id);
+
+                            @endphp
                         </div>
                     </div><!--/product-details-->
 
@@ -55,7 +60,7 @@
                         <div class="col-sm-12">
                             <ul class="nav nav-tabs">
                                 <li class="active"><a href="#details" data-toggle="tab">Details</a></li>
-                                <li ><a href="#reviews" data-toggle="tab">Reviews (5)</a></li>
+                                <li ><a href="#reviews" data-toggle="tab">Reviews {{$countreview}}</a></li>
                             </ul>
                         </div>
                         <div class="tab-content">
@@ -75,25 +80,30 @@
 
                             <div class="tab-pane fade  in" id="reviews" >
                                 <div class="col-sm-12">
+                                    @foreach($reviews as $rs)
                                     <ul>
-                                        <li><a href=""><i class="fa fa-user"></i>{{$setting->name}}</a></li>
-                                        <li><a href=""><i class="fa fa-clock-o"></i>12:41 PM</a></li>
-                                        <li><a href=""><i class="fa fa-calendar-o"></i>31 DEC 2014</a></li>
+                                        <li><a href=""><i class="fa fa-user"></i>{{$rs->user->name}}</a></li>
+                                        <li><a href=""><i class="fa fa-calendar-o"></i>{{$rs->created_at}}</a></li>
                                     </ul>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                                    <p><b>Write Your Review</b></p>
+                                    <div class="rate-this pull-right">
+                                        <i class="fa fa-star @if ($rs->rate<1) -o empty @endif"></i>
+                                        <i class="fa fa-star @if ($rs->rate<2) -o empty @endif"></i>
+                                        <i class="fa fa-star @if ($rs->rate<3) -o empty @endif"></i>
+                                        <i class="fa fa-star @if ($rs->rate<4) -o empty @endif"></i>
+                                        <i class="fa fa-star @if ($rs->rate<5) -o empty @endif"></i>
 
-                                    <form action="#">
-										<span>
-											<input type="text" placeholder="Your Name"/>
-											<input type="email" placeholder="Email Address"/>
-										</span>
-                                        <textarea name="" ></textarea>
-                                        <b>Rating: </b> <img src="images/product-details/rating.png" alt="" />
-                                        <button type="button" class="btn btn-default pull-right">
-                                            Submit
-                                        </button>
-                                    </form>
+                                    </div>
+                                    <div class="review-body">
+                                        <strong>{{$rs->subject}}</strong>
+                                        <p>{{$rs->review}}</p>
+
+                                    </div>
+                                    @endforeach
+
+
+
+                                     <p><b>Write Your Review</b></p>
+                                    @livewire('review',['id'=>$data->id])
                                 </div>
                             </div>
 

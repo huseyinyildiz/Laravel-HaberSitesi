@@ -4,7 +4,7 @@
         <ul class="nav nav-pills nav-stacked">
             <li><a href="{{route('myprofile')}}"> My Profile</a></li>
             <li><a href="#"> My News</a></li>
-            <li><a href="#"> My Reviews</a></li>
+            <li><a href="{{route('myreviews')}}"> My Reviews</a></li>
             <li><a href="#"> My Messages</a></li>
             <li><a href="{{route('logout')}}"> Logout</a></li>
 

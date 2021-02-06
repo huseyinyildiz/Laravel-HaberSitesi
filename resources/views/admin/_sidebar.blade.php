@@ -31,6 +31,10 @@
             <li>
                 <a href="{{route('admin_message')}}"><i class="fa fa-anchor "></i>Contact Messages</a>
             </li>
+            <li>
+                <a href="{{route('admin_review')}}"><i class="fa fa-anchor "></i>Reviews</a>
+            </li>
+
 
 
 

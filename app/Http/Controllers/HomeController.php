@@ -6,6 +6,7 @@ use App\Models\Category;
 use App\Models\Image;
 use App\Models\Message;
 use App\Models\News;
+use App\Models\Review;
 use App\Models\Setting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -22,6 +23,19 @@ class HomeController extends Controller
     {
         return Setting::first();
     }
+
+    public static function countreview($id)
+    {
+        return Review::where('news_id',$id)->count();
+    }
+    public static function avrgreview($id)
+    {
+        return Review::where('news_id', $id)->average('rate');
+    }
+
+
+
+
     public function categorynews($id,$slug)
     {
 
@@ -76,7 +90,8 @@ class HomeController extends Controller
     {
         $data=News::find($id);
         $datalist = Image::where('news_id',$id)->get();
-        return view('home.news_detail',['data'=>$data, 'datalist'=>$datalist]);
+        $reviews = Review::where('news_id',$id)->get();
+        return view('home.news_detail',['data'=>$data, 'datalist'=>$datalist,'reviews'=>$reviews]);
 
     }
 
