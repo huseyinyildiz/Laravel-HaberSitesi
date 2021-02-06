@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\MessageController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\UsernewsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -34,6 +35,38 @@ Route::post('/sendmessage', [HomeController::class, 'sendmessage'])->name('sendm
 Route::get('/new/[{id}/{slug}', [HomeController::class, 'new'])->name('new');
 Route::post('/getnew', [HomeController::class, 'getnew'])->name('getnew');
 Route::get('/newlist/{search}', [HomeController::class, 'newlist'])->name('newlist');
+
+Route::middleware('auth')->prefix('user')->namespace('user')->group(function (){
+
+    Route::get('/profile',[UserController::class,'index'])->name('userprofile');
+
+    Route::prefix('news')->group(function (){
+
+        Route::get('/', [UsernewsController::class, 'index'])->name('user_news');
+        Route::get('/create', [UsernewsController::class, 'create'])->name('user_news_add');
+        Route::post('/store', [UsernewsController::class, 'store'])->name('user_news_store');
+        Route::get('/edit/{id}', [UsernewsController::class, 'edit'])->name('user_news_edit');
+        Route::post('/update/{id}', [UsernewsController::class, 'update'])->name('user_news_update');
+        Route::get('/delete/{id}', [UsernewsController::class, 'destroy'])->name('user_news_delete');
+        Route::get('/show', [UsernewsController::class, 'show'])->name('user_news_show');
+
+    });
+
+    #News/User İmage Gallery
+
+    Route::prefix('image')->group(function (){
+
+
+        Route::get('/create/{news_id}', [\App\Http\Controllers\Admin\ImageController::class, 'create'])->name('user_image_add');
+        Route::post('/store/{news_id}', [\App\Http\Controllers\Admin\ImageController::class, 'store'])->name('user_image_store');
+        Route::get('/delete/{id}/{news_id}', [\App\Http\Controllers\Admin\ImageController::class, 'destroy'])->name('user_image_delete');
+        Route::get('/show', [\App\Http\Controllers\Admin\ImageController::class, 'show'])->name('user_image_show');
+
+    });
+
+
+
+});
 
 
 
