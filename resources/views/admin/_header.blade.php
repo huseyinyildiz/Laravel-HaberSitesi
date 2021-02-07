@@ -16,4 +16,7 @@
         <a href="login.html" class="btn btn-danger" title="Logout"><i class="fa fa-exclamation-circle fa-2x"></i></a>
 
     </div>
+    <div>
+        @include('home.message')
+    </div>
 </nav>

@@ -3,14 +3,15 @@
         <ul class="nav" id="main-menu">
             <li>
                 <div class="user-img-div">
-                    <img src="{{asset('assets')}}/admin/img/user.png" class="img-thumbnail" />
-
+                    @if(Auth::user()->profile_photo_path)
+                        <img src="{{Storage::url(Auth::user()->profile_photo_path)}}" height="50" style="border-radius: 10px" class="img-thumbnail" alt="">
+                    @endif
                     <div class="inner-text">
                         @auth
                             <a href="#" class="btn btn-success">{{Auth::user()->name}}</a>
                             <a href="{{route('admin_logout')}}" class="btn btn-danger">Logout</a>
-                    @endauth
-                            <br/>
+                        @endauth
+                        <br/>
 
                     </div>
                 </div>
@@ -36,6 +37,9 @@
             </li>
             <li>
                 <a href="{{route('admin_faq')}}"><i class="fa fa-question "></i>FAQS</a>
+            </li>
+            <li>
+                <a href="{{route('admin_users')}}"><i class="fa fa-question "></i>Users</a>
             </li>
 
 
