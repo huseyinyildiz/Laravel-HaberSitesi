@@ -25,6 +25,7 @@
         <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
 
             <div class="panel-body">
+                @include('home.message')
                 <form action="{{route('admin_logincheck')}}" method="post">
                     @csrf
                     <hr />
