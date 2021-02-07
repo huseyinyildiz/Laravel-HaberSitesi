@@ -18,7 +18,7 @@
         <div class="row">
             <div class="col-md-12">
 
-                    <div class="col-md-10">
+                    <div class="col-md-12">
                         <!--   Kitchen Sink -->
                         <div class="panel panel-default">
                             <div class="panel-heading">
@@ -56,8 +56,8 @@
                                             <td>{{ $rs->rate }}</td>
                                             <td>{{ $rs->status }}</td>
                                             <td>{{ $rs->created_at }}</td>
-                                            <td><a href="{{route('admin_review_show',['id'=>$rs->id])}}" onclick="return !window.open(this.href,'','top=50 left=100 width=800,height=600')"> Edit</a></td>
-                                            <td><a href="{{route('admin_review_delete', ['id'=>$rs->id])}}" onclick="return confirm('Delete ! Are you sure?')">Delete</a></td>
+                                            <td><a href="{{route('admin_review_show',['id'=>$rs->id])}}" onclick="return !window.open(this.href,'','top=50 left=100 width=800,height=600')"> <i class="fa fa-edit"></i></a></td>
+                                            <td><a href="{{route('admin_review_delete', ['id'=>$rs->id])}}" onclick="return confirm('Delete ! Are you sure?')"><i class="fa fa-warning"></i></a></td>
                                         </tr>
                                         @endforeach
                                         </tbody>

@@ -20,12 +20,10 @@
         <div class="row">
             <div class="col-md-12">
 
-                    <div class="col-md-10">
+                    <div class="col-md-12">
                         <!--   Kitchen Sink -->
                         <div class="panel panel-default">
-                            <div class="panel-heading">
-                                News
-                            </div>
+
                             <div class="panel-body">
                                 <div class="table-responsive">
                                     <table class="table table-striped table-bordered table-hover">
@@ -55,8 +53,8 @@
                                             </td>
                                             <td><a href="{{route('admin_image_add',['news_id'=>$rs->id])}}" onclick="return !window.open(this.href,'','top=50 left=100 width=1100,height=700')"><img src="{{asset('assets/admin/images')}}/gallery.png" height="25"> </a></td>
                                             <td>{{ $rs->status }}</td>
-                                            <td><a href="{{route('admin_news_edit', ['id'=>$rs->id])}}" >Edit</a></td>
-                                            <td><a href="{{route('admin_news_delete', ['id'=>$rs->id])}}" onclick="return confirm('Delete ! Are you sure?')">Delete</a></td>
+                                            <td><a href="{{route('admin_news_edit', ['id'=>$rs->id])}}" ><i class="fa fa-edit"></i></a></td>
+                                            <td><a href="{{route('admin_news_delete', ['id'=>$rs->id])}}" onclick="return confirm('Delete ! Are you sure?')"><i class="fa fa-warning"></i></a></td>
                                         </tr>
                                         @endforeach
                                         </tbody>

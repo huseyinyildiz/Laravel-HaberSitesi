@@ -21,7 +21,7 @@
         <div class="row">
             <div class="col-md-12">
 
-                    <div class="col-md-10">
+                    <div class="col-md-12">
                         <!--   Kitchen Sink -->
                         <div class="panel panel-default">
                             <div class="panel-heading">
@@ -49,8 +49,8 @@
                                             <td>{{ $rs->question }}</td>
                                             <td>{!! $rs->answer !!}</td>
                                             <td>{{ $rs->status }}</td>
-                                            <td><a href="{{route('admin_faq_edit', ['id'=>$rs->id])}}" >Edit</a></td>
-                                            <td><a href="{{route('admin_faq_delete', ['id'=>$rs->id])}}" onclick="return confirm('Delete ! Are you sure?')">Delete</a></td>
+                                            <td><a href="{{route('admin_faq_edit', ['id'=>$rs->id])}}" ><i class="fa fa-edit"></i></a></td>
+                                            <td><a href="{{route('admin_faq_delete', ['id'=>$rs->id])}}" onclick="return confirm('Delete ! Are you sure?')"><i class="fa fa-warning"></i></a></td>
                                         </tr>
                                         @endforeach
                                         </tbody>

@@ -51,8 +51,8 @@
                                         </td>
                                         <td><a href="{{route('user_image_add',['news_id'=>$rs->id])}}" onclick="return !window.open(this.href,'','top=50 left=100 width=1100,height=700')"><img src="{{asset('assets/admin/images')}}/gallery.png" height="25"> </a></td>
                                         <td>{{ $rs->status }}</td>
-                                        <td><a href="{{route('user_news_edit', ['id'=>$rs->id])}}" >Edit</a></td>
-                                        <td><a href="{{route('user_news_delete', ['id'=>$rs->id])}}" onclick="return confirm('Delete ! Are you sure?')">Delete</a></td>
+                                        <td><a href="{{route('user_news_edit', ['id'=>$rs->id])}}" ><i class="fa fa-edit"></i></a></td>
+                                        <td><a href="{{route('user_news_delete', ['id'=>$rs->id])}}" onclick="return confirm('Delete ! Are you sure?')"><i class="fa fa-warning"></i></a></td>
                                     </tr>
                                 @endforeach
                                 </tbody>

@@ -75,7 +75,7 @@ class HomeController extends Controller
         $setting = Setting::first();
         //slidera random haber geliyor
         $slider = News::select('id','title','image','description','slug')->limit(4)->inRandomOrder()->get();
-        $daily = News::select('id','title','image','description','slug')->limit(6)->inRandomOrder()->get();
+        $daily = News::select('id','title','image','description','slug')->limit(15)->inRandomOrder()->get();
       //  $old = News::select('id','title','image','description','slug')->limit(4)->orderByDesc()->get();
 
         $data = [

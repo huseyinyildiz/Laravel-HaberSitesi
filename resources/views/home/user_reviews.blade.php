@@ -40,7 +40,7 @@
                                 <td>{{$rs->rate}}</td>
                                 <td>{{$rs->created_at}}</td>
                                 <td>
-                                    <a href="{{route('user_review_delete',['id'=>$rs->id])}}" onclick="return confirm('Delete! Are you sure?')">Delete</a>
+                                    <a href="{{route('user_review_delete',['id'=>$rs->id])}}" onclick="return confirm('Delete! Are you sure?')"><i class="fa fa-warning"></i></a>
                                 </td>
                             </tr>
                             @endforeach

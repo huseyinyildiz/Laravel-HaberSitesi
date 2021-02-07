@@ -18,13 +18,12 @@
                         <div class="item active">
                             <div class="col-sm-6">
                                 <h1><span>Hüseyin</span>-YILDIZ</h1>
-                                <h2>Free E-Commerce Template</h2>
+                                <h2>Laravel E-Haber Sitesi</h2>
                                 <p>Turkiye'nin en guvenilir haber sitesi. </p>
-                                <button type="button" class="btn btn-default get">Get it now</button>
                             </div>
                             <div class="col-sm-6">
-                                <img src="images/home/girl1.jpg" class="girl img-responsive" alt="" />
-                                <img src="images/home/pricing.png"  class="pricing" alt="" />
+                                <br><br><br><br><br>
+                                <img src="{{asset('assets')}}/images/home/ben.jpg" class="girl img-responsive" alt="" />
                             </div>
                         </div>
                         @foreach($slider as $rs)

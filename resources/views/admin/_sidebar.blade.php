@@ -21,16 +21,16 @@
 
 
             <li>
-                <a href="{{route('admin_category')}}"><i class="fa fa-bicycle "></i>Category</a>
+                <a href="{{route('admin_category')}}"><i class="fa fa-chevron-circle-down "></i>Category</a>
             </li>
             <li>
-                <a href="{{route('admin_news')}}"><i class="fa fa-anchor "></i>News</a>
+                <a href="{{route('admin_news')}}"><i class="fa fa-newspaper-o "></i>News</a>
             </li>
             <li>
-                <a href="{{route('admin_setting')}}"><i class="fa fa-building "></i>Settings</a>
+                <a href="{{route('admin_setting')}}"><i class="fa fa-wrench "></i>Settings</a>
             </li>
             <li>
-                <a href="{{route('admin_message')}}"><i class="fa fa-circle-o-notch "></i>Contact Messages</a>
+                <a href="{{route('admin_message')}}"><i class="fa fa-share-alt-square "></i>Contact Messages</a>
             </li>
             <li>
                 <a href="{{route('admin_review')}}"><i class="fa fa-comment "></i>Reviews</a>
@@ -39,7 +39,7 @@
                 <a href="{{route('admin_faq')}}"><i class="fa fa-question "></i>FAQS</a>
             </li>
             <li>
-                <a href="{{route('admin_users')}}"><i class="fa fa-question "></i>Users</a>
+                <a href="{{route('admin_users')}}"><i class="fa fa-user "></i>Users</a>
             </li>
 
 

@@ -61,8 +61,8 @@
                                                     </a>
 
                                                 </td>
-                                                <td><a href="{{route('admin_user_edit', ['id'=>$rs->id])}}" >Edit</a></td>
-                                                <td><a href="{{route('admin_news_delete', ['id'=>$rs->id])}}" onclick="return confirm('Delete ! Are you sure?')">Delete</a></td>
+                                                <td><a href="{{route('admin_user_edit', ['id'=>$rs->id])}}" ><i class="fa fa-edit"></i></a></td>
+                                                <td><a href="{{route('admin_news_delete', ['id'=>$rs->id])}}" onclick="return confirm('Delete ! Are you sure?')"><i class="fa fa-warning"></i></a></td>
                                             </tr>
                                         @endforeach
                                         </tbody>

@@ -13,7 +13,7 @@
 
 @section('content')
 
-@include('home._slider')
+    @include('home._slider')
     <section>
         <div class="container">
             <div class="row">
@@ -24,7 +24,7 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
-                                            @include('home._category')
+                                        @include('home._category')
                                     </h4>
                                 </div>
                             </div>
