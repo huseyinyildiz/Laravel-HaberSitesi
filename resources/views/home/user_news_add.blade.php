@@ -64,13 +64,6 @@
                             <input class="form-control" type="file" name="image">
 
                         </div>
-                        <div class="form-group">
-                            <label>Status</label>
-                            <select class="form-control" name="status">
-                                <option>False</option>
-                                <option>True</option>
-                            </select>
-                        </div>
 
                         <button type="submit" class="btn btn-info">Add News </button>
 

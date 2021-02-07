@@ -37,14 +37,14 @@ class HomeController extends Controller
 
 
 
-    public function categorynews($id,$slug)
+    public function categorynews($id,$slug,$status)
     {
 
        // $data=News::find($id);
         //print_r($data);
         //exit();
 
-        $datalist=News::where('category_id',$id)->get();
+        $datalist=News::where('category_id',$id)->where('status',$status)->get();
         $data=Category::find($id);
         return view('home.category_news',['data'=>$data,'datalist'=>$datalist]);
     }

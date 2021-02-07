@@ -78,10 +78,6 @@
                             @guest
                                 <li><a href="/login"><i class="fa fa-user"></i>Login</a></li>
                             @endguest
-                            @auth
-                            <li><a href=""><i class="fa fa-star"></i> Wishlist</a></li>
-                            <li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-                                @endauth
                                @guest
                             <li><a href="/register"><i class="fa fa-sign-in"></i> Register</a></li>
                                 @endguest
@@ -116,7 +112,7 @@
                             <li class="dropdown"><a href="#">Category<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
                                     @foreach($parentCategories as $rs)
-                                        <li><a href="{{route('categorynews',['id'=>$rs->id,'slug'=>$rs->title])}}">{{$rs->title}}</a></li>
+                                        <li><a href="{{route('categorynews',['id'=>$rs->id,'slug'=>$rs->title,'status'=>'true'])}}">{{$rs->title}}</a></li>
                                     @endforeach
                                 </ul>
                             </li>
@@ -124,9 +120,6 @@
                             <li><a href="{{route('contact')}}">Contact</a></li>
                             <li><a href="{{route('faq')}}"> FAQ</a></li>
                             <li><a href="{{route('references')}}">References</a></li>
-                            <li><a href="{{route('home')}}">Campains</a></li>
-                            <li><a href="{{route('home')}}">XXX</a></li>
-                            <li><a href="{{route('home')}}">New News</a></li>
                         </ul>
                     </div>
                 </div>
