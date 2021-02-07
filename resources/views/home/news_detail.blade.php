@@ -64,7 +64,7 @@
                             </ul>
                         </div>
                         <div class="tab-content">
-                            <div class="tab-pane fade active" id="details" >
+                            <div class="tab-pane fade active in" id="details">
                                 <div class="col-sm-12">
                                     <div class="product-image-wrapper">
                                         <div class="single-products">

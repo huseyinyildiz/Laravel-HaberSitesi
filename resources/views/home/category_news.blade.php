@@ -3,17 +3,18 @@
     $setting = \App\Models\Setting::first();
 @endphp
 
+
 @section('title',$data->title . 'News List')
 @section('description'){{$data->description}}@endsection
 @section('keywords',$data->keywords)
 
 
 @section('content')
-        <div class="container">
-            <div class="row">
+    <div class="container">
+        <div class="row">
 
-                <div class="col-sm-12 padding-right">
-                    @foreach($datalist as $rs)
+            <div class="col-sm-12 padding-right">
+                @foreach($datalist as $rs)
                     <div class="col-sm-4">
                         <div class="product-image-wrapper">
                             <div class="single-products">
@@ -25,10 +26,9 @@
                                 </div>
                             </div>
                         </div>
-
-                </div>
-                    @endforeach
+                    </div>
+                @endforeach
             </div>
-
         </div>
+    </div>
 @endsection
