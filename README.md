@@ -9,14 +9,14 @@
 
 ## About E Haber created by Hüseyin Yıldız
 
-This site has been prepared by making use of <a href="https://www.youtube.com/watch?v=UnNHWRenYTA&list=PLIUezwWmVtFX3aoVpOh5ZVn_EtKuX8fXw">Yüksel Çelik</a> training series.
+This site has been prepared by making use of <a href="https://www.youtube.com/watch?v=UnNHWRenYTA&list=PLIUezwWmVtFX3aoVpOh5ZVn_EtKuX8fXw" target="_blank">Yüksel Çelik</a> training series.
 
 
 ## Templates
 
 -The project consists of two templates ;
--For Admin Panel : <a href="https://www.free-css.com/free-css-templates/page192/advance-admin">Advance-Admin</a>
--For Home Template :<a href="https://www.free-css.com/free-css-templates/page203/e-shopper">E-Shopper</a>
+-For Admin Panel : <a href="https://www.free-css.com/free-css-templates/page192/advance-admin" target="_blank">Advance-Admin</a>
+-For Home Template :<a href="https://www.free-css.com/free-css-templates/page203/e-shopper" target="_blank">E-Shopper</a>
 
 
 ## Features
@@ -47,5 +47,5 @@ This site has been prepared by making use of <a href="https://www.youtube.com/wa
 
 ## Contact with Me
 
-- <a href="https://www.linkedin.com/in/hüseyin-yıldız-76324b108/">Linked İn</a>
-- <a href="https://sometity.com/huseyinyildiz">My Social Media</a>
+- <a href="https://www.linkedin.com/in/hüseyin-yıldız-76324b108/" target="_blank">Linked İn</a>
+- <a href="https://sometity.com/huseyinyildiz" target="_blank">My Social Media</a>
