@@ -68,4 +68,8 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Role::class);
     }
+    public function getAvatarUrl()
+    {
+        return asset("storage/" . $this->profile_photo_path);
+    }
 }

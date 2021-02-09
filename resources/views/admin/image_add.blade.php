@@ -74,7 +74,7 @@
                                                 <img src="{{Storage::url($rs->image)}}" height="60" alt="">
                                             @endif
                                         </td>
-                                        <td><a href="{{route('admin_image_delete', ['id'=>$rs->id, 'news_id'=>$data->id])}}" onclick="return confirm('Delete ! Are you sure?')">Delete</a></td>
+                                        <td><a href="{{route('admin_image_delete', ['id'=>$rs->id, 'news_id'=>$data->id])}}" onclick="return confirm('Delete ! Are you sure?')"><i class="fa fa-warning"></i></a></td>
                                     </tr>
                                 @endforeach
                                 </tbody>
