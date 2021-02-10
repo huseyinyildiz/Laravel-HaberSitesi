@@ -104,13 +104,18 @@ class HomeController extends Controller
     }
     public function faq()
     {
-        $datalist=Faq::all()->sortBy('position');
+        $datalist=Faq::all()->sortBy('position')->where('status','True');
         return view('home.faq',['datalist'=>$datalist]);
     }
     public function contact()
     {
         $setting = Setting::first();
         return view('home.contact');
+    }
+    public static function titleshow($id)
+    {
+        $datalist = News::find($id);
+        return $datalist->title;
     }
     public function sendmessage(Request $request)
     {

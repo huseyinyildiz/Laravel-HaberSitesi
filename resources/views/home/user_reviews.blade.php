@@ -33,7 +33,7 @@
                         @foreach($datalist as $rs)
                             <tr>
                                 <td>{{$rs->id}}</td>
-                                <td>{{$rs->news_id}}</td>
+                                <td>{{\App\Http\Controllers\HomeController::titleshow($rs->news_id)}}</td>
                                 <td>{{$rs->subject}}</td>
                                 <td>{{$rs->review}}</td>
                                 <td>{{$rs->status}}</td>

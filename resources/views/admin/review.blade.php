@@ -51,7 +51,7 @@
                                                 <a href="{{route('admin_user_show',['id'=>$rs->user->id])}}" onclick="return !window.open(this.href,'','top=50 left=100 width=800,height=600')">
                                                 {{ $rs->user->name }}</a>
                                             </td>
-                                            <td>{{$rs->news_id}}</td>
+                                            <td>{{\App\Http\Controllers\HomeController::titleshow($rs->news_id)}}</td>
                                             <td>{{ $rs->subject }}</td>
                                             <td>{{ $rs->review }}</td>
                                             <td>{{ $rs->rate }}</td>
